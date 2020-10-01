@@ -80,7 +80,10 @@ export class UsersService {
   async findUserByEmail(email: string): Promise<User> {
     let user: User;
     try {
-      user = await this.usersModel.findOne({ email: email }).exec();
+      user = await this.usersModel
+        .findOne({ email: email })
+        .populate({ path: 'pole', select: '-__v' })
+        .exec();
     } catch (error) {
       throw new NotFoundException('the email of your user is invalid');
     }
