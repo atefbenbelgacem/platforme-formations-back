@@ -30,6 +30,18 @@
 
 ## Installation
 
+```
+$ install mongoDB server and make sure it's running as a service (if you are on windows, you may want to follow the instructions located at the officiel web site)
+```
+
+```
+$ make sure mongo service is running at port 27017, or you can modify this at src/app.module.ts file
+```
+
+```bash
+$ npm install -g @nestjs/cli : to install the Nest Cli
+```
+
 ```bash
 $ npm install
 ```
@@ -37,6 +49,9 @@ $ npm install
 ## Running the app
 
 ```bash
+# database init ==> email : admin@gmail.com , password: admin123
+$ ts-node src/shared/dbInit
+
 # development
 $ npm run start
 
