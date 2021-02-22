@@ -19,7 +19,7 @@ export class PizzaUController {
         return newPizza
     }
 
-    @UseGuards(AdminGuard)
+    //@UseGuards(AdminGuard)
     @Get()
     async FindAll() {
         const pizzas = await this.pizzaService.findAll()
